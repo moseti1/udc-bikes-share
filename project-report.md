@@ -3,44 +3,44 @@
 
 ## Initial Training
 ### What did you realize when you tried to submit your predictions? What changes were needed to the output of the predictor to submit your results?
-TODO: Predictions dataframe needed to be turned into a `csv` file using `.to_csv` method of python.
+There were negative datapoints,with which their values had to be changed to zero.
+
 
 ### What was the top ranked model that performed?
-TODO: The top Ranked model was WeightedEnsemble. I had the highest score of all. 
+WeightedEnsemble_L3 
 
 ## Exploratory data analysis and feature creation
 ### What did the exploratory analysis find and how did you add additional features?
-TODO: Add your explanation
+Most of the feature gave more insite on the distribution of data point like `day`, `hour` and `month`
 
 ### How much better did your model preform after adding additional features and why do you think that is?
-TODO: The model score of Weighted Ensemble increased
+Performance greatly improved the model perfomance. It also lead to improvement in the value of kaggle score.
 
 ## Hyper parameter tuning
 ### How much better did your model preform after trying different hyper parameters?
-TODO: The model score in creased when i introduced the `num_trials` hyperparameter. 
+Model performance score improved greatly in kaggle score from a value of a `1.39323`  to `0.48303`.
 
 ### If you were given more time with this dataset, where do you think you would spend more time?
-TODO: Add your explanation
-I would spend time in doing proper feature selection. The models seemed to respond better with more feature. Also time on parameter tuning would be excellent. 
+I would spend alot of time in hyperparameter tuning. Tuning parameters  seem to bring very excellent results.
 
 ### Create a table with the models you ran, the hyperparameters modified, and the kaggle score.
 |model|hpo1|hpo2|hpo3|score|
-|WeightedEnsemble|default|default|search_strategy, num_trials,scheduler|1.37974|
-|initial|default|default|default|1.37132|
-|add_features|default|default|default|1.37526|
-|hpo|search_strategy|scheduler|num_trials|1.37974|
+|initial|time_limit|presets|root_mean_squared_error|1.39323|
+|add_features|time_limit|presets|root_mean_squared_error|0.48303|
+|hpo|time_limit|presets|root_mean_squared_error|0.47125|
+
+
 
 ### Create a line plot showing the top model score for the three (or more) training runs during the project.
 
-TODO: Replace the image below with your own.
 
 ![model_train_score.png](img/model_train_score.png)
 
 ### Create a line plot showing the top kaggle score for the three (or more) prediction submissions during the project.
 
-TODO: Replace the image below with your own.
+
 
 ![model_test_score.png](img/model_test_score.png)
 
 ## Summary
-TODO: Of all the model, WeightedEnsemble seemed to work best.Its rmse was 
+Autoglon is a very excellent tool for doing machine learning tasks fast and for easy setup. Hyperparameter tuning real does the magic here for you to obtain best results.
